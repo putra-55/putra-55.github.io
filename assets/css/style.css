@@ -16,6 +16,12 @@ Project: Resume Html
   --cv-box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
 }
 
+.cv_exp_info a img {
+  width: calc(2vw + 40px);
+  height: calc(2vw + 40px);
+  /* aspect-ratio: 1/1; */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -519,7 +525,7 @@ section {
 
 .cv_banner_img::before {
   max-width: 660px;
-  max-height: 500px;
+  max-height: calc(60vmin + 100px);
   border-radius: 50px;
   background-color: #18c6da;
   content: "";

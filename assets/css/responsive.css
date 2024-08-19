@@ -157,7 +157,7 @@ Max - Width Query
   .cv_edu_heading h2,
   .cv_do_heading h2,
   .cv_client_heading h2 {
-    margin-left: auto;
+    /* margin-left: auto; */
   }
 
   .cv_edu_heading p,
@@ -313,7 +313,7 @@ Max - Width Query
   .cv_banner_img::before {
     max-width: 100%;
     /* max-height: -webkit-fill-available; */
-    border-radius: 30px;
+    /* border-radius: 30px; */
   }
 
   .cv_banner_text h1 {
