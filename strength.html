@@ -11,13 +11,14 @@
     <!--=== custom css ===-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
-    <link
-      rel="shortcut icon"
-      type="image/ico"
-      href="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/favicon.png"
-    />
+    <link rel="shortcut icon" type="image/ico" href="assets/images/hero.png" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+      .cv_skill_icon img {
+        width: 100px !important;
+      }
+    </style>
     <!--=== custom css ===-->
     <title>Portfolio Responsive HTML Template</title>
   </head>
@@ -56,10 +57,7 @@
               <div class="cv_navbar">
                 <div class="cv_logo">
                   <a href="index.html">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/logo.png"
-                      class="img-fluid"
-                    />
+                    <div class="fw-bold display-5 text-light">Putra</div>
                   </a>
                 </div>
                 <a href="javascript:void(0);" class="cv_toggle_btn">
@@ -145,20 +143,20 @@
       <!-- Do Section Start -->
       <div class="cv_do_wrapper">
         <div class="cv_container container-fluid">
-          <div class="row align-items-center">
+          <div class="row align-items-center flex-column">
             <div class="col-xl-4">
-              <div class="cv_do_heading">
+              <div class="cv_do_heading text-center">
                 <h2>What I Do</h2>
                 <p>
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim velit mollit.
-                  Exercitation veniam consequat sunt nostrud amet.
+                  I specialize in creating beautiful and functional websites,
+                  designing engaging graphics, and developing robust web
+                  applications.
                 </p>
               </div>
               <div class="cv_do_img"></div>
             </div>
             <div class="col-xl-8">
-              <div class="row">
+              <div class="row justify-content-center">
                 <div class="col-sm-6">
                   <div class="cv_do_box">
                     <div class="cv_do_icon">
@@ -169,8 +167,8 @@
                     <div class="cv_do_text">
                       <h4>Website Design</h4>
                       <p>
-                        Embarrassing hidden in the middle of text. All the Ipsum
-                        generate on the are Internettend.
+                        I create visually appealing and user-friendly website
+                        designs that enhance user experience and engagement.
                       </p>
                     </div>
                   </div>
@@ -185,24 +183,9 @@
                     <div class="cv_do_text">
                       <h4>Graphic Design</h4>
                       <p>
-                        Embarrassing hidden in the middle of text. All the Ipsum
-                        generate on the are Internettend.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="cv_do_box">
-                    <div class="cv_do_icon">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/do-icon3.svg"
-                      />
-                    </div>
-                    <div class="cv_do_text">
-                      <h4>Logo Design</h4>
-                      <p>
-                        Embarrassing hidden in the middle of text. All the Ipsum
-                        generate on the are Internettend.
+                        I design graphics that communicate your brand's message
+                        effectively and leave a lasting impression on your
+                        audience.
                       </p>
                     </div>
                   </div>
@@ -217,8 +200,8 @@
                     <div class="cv_do_text">
                       <h4>Web Development</h4>
                       <p>
-                        Embarrassing hidden in the middle of text. All the Ipsum
-                        generate on the are Internettend.
+                        I develop robust and scalable web applications using the
+                        latest technologies and best practices.
                       </p>
                     </div>
                   </div>
@@ -229,407 +212,318 @@
         </div>
       </div>
       <!-- Do Section End -->
-      <!-- Award Section Start -->
-      <section class="cv_award_wrapper">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-4 col-sm-6">
-              <div class="cv_award_box">
-                <div class="cv_award_icon">
-                  <img
-                    src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/award-1.svg"
-                  />
+      <!-- Skill Section Start -->
+      <section class="cv_skill_wrapper">
+        <div class="cv_container container-fluid">
+          <div class="row align-items-center flex-column-reverse">
+            <div class="col-xl-8">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+                      />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>HTML</h4>
+                        <p>100%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 100%"
+                            aria-valuenow="100"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="cv_award_text">
-                  <h1>
-                    <span
-                      class="timer"
-                      data-from="0"
-                      data-to="100"
-                      data-speed="2000"
-                    ></span
-                    >+
-                  </h1>
-                  <h4>Happy Clients</h4>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img src="/assets/images/skills/css.png" />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>CSS</h4>
+                        <p>80%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 80%"
+                            aria-valuenow="80"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                      />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>JavaScript</h4>
+                        <p>70%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 70%"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original-wordmark.svg"
+                      />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>JQuery</h4>
+                        <p>70%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 70%"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+                      />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>Sass</h4>
+                        <p>50%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 50%"
+                            aria-valuenow="50"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img
+                        src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                      />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>PHP</h4>
+                        <p>80%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 80%"
+                            aria-valuenow="80"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img src="https://laravel.com/img/logomark.min.svg" />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>Laravel</h4>
+                        <p>75%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 75%"
+                            aria-valuenow="75"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img
+                        src="https://cdn.worldvectorlogo.com/logos/codeigniter.svg"
+                      />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class="cv_skill_text">
+                        <h4>CodeIgniter</h4>
+                        <p>70%</p>
+                      </div>
+                      <div class="cv_skill_bar">
+                        <div class="progress">
+                          <div
+                            class="progress-bar"
+                            role="progressbar"
+                            style="width: 70%"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="cv_skill_box">
+                    <div class="cv_skill_icon">
+                      <img
+                        src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+                      />
+                    </div>
+                    <div class="cv_skill_progress">
+                      <div class "cv_skill_text">
+                      <h4>Bootstrap</h4>
+                      <p>80%</p>
+                    </div>
+                    <div class="cv_skill_bar">
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 80%"
+                          aria-valuenow="80"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="cv_award_box">
-                <div class="cv_award_icon">
-                  <img
-                    src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/award-2.svg"
-                  />
-                </div>
-                <div class="cv_award_text">
-                  <h1
-                    class="timer"
-                    data-from="0"
-                    data-to="80"
-                    data-speed="2000"
-                  ></h1>
-                  <h4>Project Done</h4>
+              <div class="col-md-6">
+                <div class="cv_skill_box">
+                  <div class="cv_skill_icon">
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                    />
+                  </div>
+                  <div class="cv_skill_progress">
+                    <div class="cv_skill_text">
+                      <h4>SQL</h4>
+                      <p>75%</p>
+                    </div>
+                    <div class="cv_skill_bar">
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 75%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="cv_award_box">
-                <div class="cv_award_icon">
-                  <img
-                    src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/award-3.svg"
-                  />
-                </div>
-                <div class="cv_award_text">
-                  <h1
-                    class="timer"
-                    data-from="0"
-                    data-to="20"
-                    data-speed="2000"
-                  ></h1>
-                  <h4>Award Won</h4>
+              <div class="col-md-6">
+                <div class="cv_skill_box">
+                  <div class="cv_skill_icon">
+                    <img
+                      src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg"
+                    />
+                  </div>
+                  <div class="cv_skill_progress">
+                    <div class="cv_skill_text">
+                      <h4>Vue JS</h4>
+                      <p>50%</p>
+                    </div>
+                    <div class="cv_skill_bar">
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Award Section End -->
-      <!-- Skill Section Start -->
-      <section class="cv_skill_wrapper">
-        <div class="cv_container container-fluid">
-          <div class="row align-items-center">
-            <div class="col-xl-8">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="cv_skill_box">
-                    <div class="cv_skill_icon">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/skill-1.svg"
-                      />
-                    </div>
-                    <div class="cv_skill_progress">
-                      <div class="cv_skill_text">
-                        <h4>Figma</h4>
-                        <p>95%</p>
-                      </div>
-                      <div class="cv_skill_bar">
-                        <div class="progress">
-                          <div
-                            class="progress-bar"
-                            role="progressbar"
-                            style="width: 95%"
-                            aria-valuenow="25"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cv_skill_box">
-                    <div class="cv_skill_icon">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/skill-2.svg"
-                      />
-                    </div>
-                    <div class="cv_skill_progress">
-                      <div class="cv_skill_text">
-                        <h4>Photoshop</h4>
-                        <p>95%</p>
-                      </div>
-                      <div class="cv_skill_bar">
-                        <div class="progress">
-                          <div
-                            class="progress-bar"
-                            role="progressbar"
-                            style="width: 95%"
-                            aria-valuenow="25"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cv_skill_box">
-                    <div class="cv_skill_icon">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/skill-3.svg"
-                      />
-                    </div>
-                    <div class="cv_skill_progress">
-                      <div class="cv_skill_text">
-                        <h4>Illustrator</h4>
-                        <p>95%</p>
-                      </div>
-                      <div class="cv_skill_bar">
-                        <div class="progress">
-                          <div
-                            class="progress-bar"
-                            role="progressbar"
-                            style="width: 95%"
-                            aria-valuenow="25"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cv_skill_box">
-                    <div class="cv_skill_icon">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/skill-4.svg"
-                      />
-                    </div>
-                    <div class="cv_skill_progress">
-                      <div class="cv_skill_text">
-                        <h4>After Effect</h4>
-                        <p>95%</p>
-                      </div>
-                      <div class="cv_skill_bar">
-                        <div class="progress">
-                          <div
-                            class="progress-bar"
-                            role="progressbar"
-                            style="width: 95%"
-                            aria-valuenow="25"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cv_skill_box">
-                    <div class="cv_skill_icon">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/skill-5.svg"
-                      />
-                    </div>
-                    <div class="cv_skill_progress">
-                      <div class="cv_skill_text">
-                        <h4>CorelDraw</h4>
-                        <p>95%</p>
-                      </div>
-                      <div class="cv_skill_bar">
-                        <div class="progress">
-                          <div
-                            class="progress-bar"
-                            role="progressbar"
-                            style="width: 95%"
-                            aria-valuenow="25"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="cv_skill_box">
-                    <div class="cv_skill_icon">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/skill-6.svg"
-                      />
-                    </div>
-                    <div class="cv_skill_progress">
-                      <div class="cv_skill_text">
-                        <h4>Premiere Pro</h4>
-                        <p>95%</p>
-                      </div>
-                      <div class="cv_skill_bar">
-                        <div class="progress">
-                          <div
-                            class="progress-bar"
-                            role="progressbar"
-                            style="width: 95%"
-                            aria-valuenow="25"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4">
-              <div class="cv_exp_info">
-                <div class="cv_exp_heading">
-                  <h2>My Skills</h2>
-                  <p>
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit. Exercitation veniam consequat sunt nostrud amet.
-                  </p>
-                </div>
+          <div class="col-xl-4">
+            <div class="cv_exp_info justify-content-center">
+              <div class="cv_exp_heading">
+                <h2>My Skills</h2>
+                <p>Here's my programming language skills:</p>
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Skill Section End -->
-      <!-- Project Section Start -->
-      <section class="cv_project_wrapper">
-        <div class="cv_container container-fluid">
-          <div class="row">
-            <div class="col-12">
-              <div class="cv_sec_heading">
-                <h2>Latest Projects</h2>
-                <p>
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim velit mollit.
-                </p>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="cv_project_content">
-                <div class="cv_project_box">
-                  <div class="cv_project_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/proj-1.webp"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="cv_project_text">
-                    <div class="cv_project_heading">
-                      <p>Development</p>
-                      <span>
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/time.svg"
-                        />
-                        1 Month Ago
-                      </span>
-                    </div>
-                    <div class="cv_project_title">
-                      <p>Best Wireframe Tools For Web Designers.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cv_project_box">
-                  <div class="cv_project_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/proj-2.webp"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="cv_project_text">
-                    <div class="cv_project_heading">
-                      <p>Development</p>
-                      <span>
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/time.svg"
-                        />
-                        1 Month Ago
-                      </span>
-                    </div>
-                    <div class="cv_project_title">
-                      <p>Best Wireframe Tools For Web Designers.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="cv_project_box">
-                  <div class="cv_project_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/proj-3.webp"
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="cv_project_text">
-                    <div class="cv_project_heading">
-                      <p>Development</p>
-                      <span>
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/time.svg"
-                        />
-                        1 Month Ago
-                      </span>
-                    </div>
-                    <div class="cv_project_title">
-                      <p>Best Wireframe Tools For Web Designers.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="cv_bottom_btn">
-                <a href="javascript:void(0)" class="cv_btn">View More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Project Section End -->
-      <!-- Client Section Start -->
-      <section class="cv_client_wrapper">
-        <div class="cv_container container-fluid">
-          <div class="row align-items-center">
-            <div class="col-xl-4">
-              <div class="cv_exp_info">
-                <div class="cv_client_heading">
-                  <h2>Our Clients</h2>
-                  <p>
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit. Exercitation veniam consequat sunt nostrud amet.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-8">
-              <div class="cv_client_info">
-                <div class="cv_client_box">
-                  <div class="cv_client_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/client-1.png"
-                    />
-                  </div>
-                  <div class="cv_client_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/client-2.png"
-                    />
-                  </div>
-                  <div class="cv_client_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/client-3.png"
-                    />
-                  </div>
-                </div>
-                <div class="cv_client_box">
-                  <div class="cv_client_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/client-4.png"
-                    />
-                  </div>
-                  <div class="cv_client_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/client-5.png"
-                    />
-                  </div>
-                  <div class="cv_client_img">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/client-6.png"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Client Section End -->
       <!-- Footer Section Start -->
       <div class="cv_footer_wrapper">
         <div class="container">

@@ -11,13 +11,44 @@
     <!--=== custom css ===-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
-    <link
-      rel="shortcut icon"
-      type="image/ico"
-      href="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/favicon.png"
-    />
+    <link rel="shortcut icon" type="image/ico" href="assets/images/hero.png" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <style>
+      .cv_gallery_wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 3 kolom */
+        gap: 20px; /* Jarak antar item */
+      }
+
+      .cv_gallery_item:nth-child(9n + 1) {
+        grid-column: span 2;
+      }
+      .cv_gallery_img,
+      .cv_gallery_img img {
+        height: 100%;
+        min-height: 200px;
+        /* aspect-ratio: 1/1; */
+      }
+      @media (max-width: 991px) {
+        .cv_gallery_wrapper {
+          grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+        }
+        .cv_gallery_item:nth-child(9n + 1) {
+          grid-column: span 2;
+        }
+      }
+      @media (max-width: 769px) {
+        .cv_gallery_wrapper {
+          grid-template-columns: repeat(2, 1fr); /* 3 kolom */
+          gap: 10px !important; /* Jarak antar item */
+        }
+        .cv_gallery_item:nth-child(3n + 1) {
+          grid-column: span 2;
+        }
+      }
+    </style>
     <!--=== custom css ===-->
     <title>Portfolio Responsive HTML Template</title>
   </head>
@@ -56,10 +87,7 @@
               <div class="cv_navbar">
                 <div class="cv_logo">
                   <a href="index.html">
-                    <img
-                      src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/logo.png"
-                      class="img-fluid"
-                    />
+                    <div class="fw-bold display-5 text-light">Putra</div>
                   </a>
                 </div>
                 <a href="javascript:void(0);" class="cv_toggle_btn">
@@ -145,404 +173,260 @@
       <!-- Portfolio Section Start -->
       <div class="cv_portfolio_wrapper">
         <div class="cv_container container-fluid">
+          <div
+            class="cv_do_heading d-flex flex-column align-items-center mb-4 text-center"
+          >
+            <h2>My Projects</h2>
+            <p>
+              Here are some of my projects that I have worked on. I have
+              developed these projects using various technologies and tools.
+            </p>
+          </div>
           <div class="row">
             <div class="col-12">
-              <ul class="cv_port_tab">
-                <li>
-                  <a class="active" data-rel="tab-1" href="javascript:void(0)"
-                    >All</a
-                  >
-                </li>
-                <li>
-                  <a class="" data-rel="tab-2" href="javascript:void(0)"
-                    >Website</a
-                  >
-                </li>
-                <li>
-                  <a class="" data-rel="tab-3" href="javascript:void(0)"
-                    >Mobile App</a
-                  >
-                </li>
-                <li>
-                  <a class="" data-rel="tab-4" href="javascript:void(0)"
-                    >Dashboard</a
-                  >
-                </li>
-                <li>
-                  <a class="" data-rel="tab-5" href="javascript:void(0)"
-                    >Creative</a
-                  >
-                </li>
-              </ul>
-              <!-- All Tab -->
-              <div class="cv_tab_pane" id="tab-1" style="display: block">
-                <div class="cv_gallery_wrapper">
-                  <div class="cv_gallery_item item-1">
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-1">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-1.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
+              <div class="cv_gallery_wrapper row g-0">
+                <!-- Jaya Putra Teknik -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/jpt.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Jaya Putra Teknik</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-primary">CMS</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
                       </div>
-                      <div class="cv_gallery_img img-2">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-2.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="cv_gallery_img img-3">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-5.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="cv_gallery_item item-2">
-                    <div class="cv_gallery_img img-4">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-3.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-5">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-4.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                      <div class="cv_gallery_img img-6">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-6.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
+                    </span>
                   </div>
                 </div>
-              </div>
-              <!-- Website Tab -->
-              <div class="cv_tab_pane" id="tab-2">
-                <div class="cv_gallery_wrapper">
-                  <div class="cv_gallery_item item-1">
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-1">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-1.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
+                <!-- Baby Elephant Shoot -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/bes.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Baby Elephant Shoot</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
                       </div>
-                      <div class="cv_gallery_img img-2">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-2.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="cv_gallery_img img-3">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-5.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="cv_gallery_item item-2">
-                    <div class="cv_gallery_img img-4">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-3.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-5">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-4.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                      <div class="cv_gallery_img img-6">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-6.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
+                    </span>
                   </div>
                 </div>
-              </div>
-              <!-- Mobile Tab -->
-              <div class="cv_tab_pane" id="tab-3">
-                <div class="cv_gallery_wrapper">
-                  <div class="cv_gallery_item item-1">
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-1">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-1.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
+                <!-- CV. Tirai Kencana -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/tirai-kencana.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>CV. Tirai Kencana</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-success">Vue JS</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
                       </div>
-                      <div class="cv_gallery_img img-2">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-2.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="cv_gallery_img img-3">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-5.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="cv_gallery_item item-2">
-                    <div class="cv_gallery_img img-4">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-3.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-5">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-4.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                      <div class="cv_gallery_img img-6">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-6.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
+                    </span>
                   </div>
                 </div>
-              </div>
-              <!-- Dashboard Tab -->
-              <div class="cv_tab_pane" id="tab-4">
-                <div class="cv_gallery_wrapper">
-                  <div class="cv_gallery_item item-1">
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-1">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-1.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
+                <!-- SPEAKCLASS -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/speakclass.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>SPEAKCLASS</h4>
+                      <div class="mb-2 design-by">
+                        Design by
+                        <a href="https://yokirahmada.com/">Yoki Rahmada</a>
                       </div>
-                      <div class="cv_gallery_img img-2">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-2.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
                       </div>
-                    </div>
-                    <div class="cv_gallery_img img-3">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-5.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="cv_gallery_item item-2">
-                    <div class="cv_gallery_img img-4">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-3.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-5">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-4.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                      <div class="cv_gallery_img img-6">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-6.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
+                    </span>
                   </div>
                 </div>
-              </div>
-              <!-- Creative Tab -->
-              <div class="cv_tab_pane" id="tab-5">
-                <div class="cv_gallery_wrapper">
-                  <div class="cv_gallery_item item-1">
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-1">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-1.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
+                <!-- Supplier Exportir -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/supplier-exportir.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Supplier Exportir</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
                       </div>
-                      <div class="cv_gallery_img img-2">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-2.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="cv_gallery_img img-3">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-5.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                  </div>
-                  <div class="cv_gallery_item item-2">
-                    <div class="cv_gallery_img img-4">
-                      <img
-                        src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-3.webp"
-                        class="img-fluid"
-                      />
-                      <span class="cv_gallery_hover">
-                        <p>Website</p>
-                        <h4>Creative Website</h4>
-                      </span>
-                    </div>
-                    <div class="cv_gallery_small">
-                      <div class="cv_gallery_img img-5">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-4.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                      <div class="cv_gallery_img img-6">
-                        <img
-                          src="https://kamleshyadav.com/html/portfolio/html/bootstrap5/new_dark/assets/images/port-6.webp"
-                          class="img-fluid"
-                        />
-                        <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
-                        </span>
-                      </div>
-                    </div>
+                    </span>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="cv_bottom_btn">
-                <a href="javascript:void(0)" class="cv_btn">View More</a>
+                <!-- PT. Eagan Warsana Energi -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/eagan.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>PT. Eagan Warsana Energi</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- Web Sekolah MI Ahmad Yani -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/miayani.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Web Sekolah MI Ahmad Yani</h4>
+                      <div>
+                        <span class="badge bg-success">Vue JS</span>
+                        <span class="badge bg-info">Vuetify</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- Mitra Cabang CV. Indekslink Indonesia -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/mitra-cabang.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Mitra Cabang CV. Indekslink Indonesia</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- PT. DVACAKRA CENTRICA INDONESIA (CENTRICA) -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/centrica.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>PT. DVACAKRA CENTRICA INDONESIA (CENTRICA)</h4>
+                      <div>
+                        <span class="badge bg-info">Wordpress</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- PT. Indonesia Bersatu Sejahtera -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/ibs.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>PT. Indonesia Bersatu Sejahtera</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- Desa Tikusan -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/desa-tikusan.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Desa Tikusan</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- Rizki Alam Lestari -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/rizki-alam-lestari.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Rizki Alam Lestari</h4>
+                      <div>
+                        <span class="badge bg-secondary">Landing Page</span>
+                        <span class="badge bg-bootstrap">Bootstrap 5</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- Sistem Inventaris -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/project-1.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Dashboard</p>
+                      <h4>Sistem Inventaris</h4>
+                      <div>
+                        <span class="badge bg-danger">Laravel 7</span>
+                        <span class="badge bg-bootstrap">Bootstrap 4</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
+                <!-- Mandiri Foto Group -->
+                <div class="cv_gallery_item">
+                  <div class="cv_gallery_img">
+                    <img
+                      src="./assets/images/projects/project-3.png"
+                      class="img-fluid"
+                    />
+                    <span class="cv_gallery_hover">
+                      <p>Website</p>
+                      <h4>Mandiri Foto Group</h4>
+                      <div>
+                        <span class="badge bg-orange">CodeIgniter 3</span>
+                        <span class="badge bg-bootstrap">Bootstrap 4</span>
+                      </div>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

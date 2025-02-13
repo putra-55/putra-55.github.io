@@ -1149,6 +1149,7 @@ section {
 }
 
 .cv_exp_heading ul li a img {
+  object-fit: contain;
   transition: var(--cv-transition);
 }
 
