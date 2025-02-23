@@ -476,7 +476,7 @@ section {
  *******************************************************/
 
 .cv_banner_wrapper {
-  background-image: url(../images/banner-bg.webp);
+  /* background-image: url(../images/banner-bg.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -490,7 +490,7 @@ section {
 .cv_banner_wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(../images/banner-shape.svg);
+  /* background-image: url(../images/banner-shape.svg); */
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -650,7 +650,7 @@ section {
 
 .cv_about_wrapper {
   padding: 120px 0 90px;
-  background-image: url(../images/about-bg.webp);
+  /* background-image: url(../images/about-bg.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -661,7 +661,7 @@ section {
 .cv_about_wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(../images/about-shaps.webp);
+  /* background-image: url(../images/about-shaps.webp); */
   background-repeat: no-repeat;
   background-size: auto;
   width: 100%;
@@ -980,7 +980,7 @@ section {
  *******************************************************/
 
 .cv_experience_wrapper {
-  background-image: url(../images/exp_bg.webp);
+  /* background-image: url(../images/exp_bg.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -991,7 +991,7 @@ section {
 .cv_experience_wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(../images/exp_shaps.webp);
+  /* background-image: url(../images/exp_shaps.webp); */
   background-repeat: no-repeat;
   background-size: auto;
   width: 100%;
@@ -1168,7 +1168,7 @@ section {
 .cv_portfolio_wrapper {
   position: relative;
   padding: 120px 0 90px;
-  background-image: url(../images/port_bg.webp);
+  /* background-image: url(../images/port_bg.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1321,7 +1321,7 @@ section {
 .cv_do_wrapper {
   position: relative;
   padding: 120px 0 90px;
-  background-image: url(../images/strength_bg.webp);
+  /* background-image: url(../images/strength_bg.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1886,7 +1886,7 @@ section {
 .cv_map_wrapper {
   position: relative;
   padding: 120px 0 90px;
-  background-image: url(../images/map-bg.svg);
+  /* background-image: url(../images/map-bg.svg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1955,7 +1955,7 @@ section {
  *******************************************************/
 .cv_address_wrapper {
   position: relative;
-  background-image: url(../images/award_bg.webp);
+  /* background-image: url(../images/award_bg.webp); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1965,7 +1965,7 @@ section {
 .cv_address_wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(../images/add-shape.webp);
+  /* background-image: url(../images/add-shape.webp); */
   background-repeat: no-repeat;
   background-size: auto;
   width: 100%;

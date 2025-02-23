@@ -31,7 +31,9 @@ Project: Resume html
 
     // Typing Effect
     tyipng: function () {
-      window.ityped.init(document.querySelector(".cv_profile_name"), {
+      let elTyped = document.querySelector(".cv_profile_name");
+      if (!elTyped) return;
+      window.ityped.init(elTyped, {
         strings: [
           "Riski Putra Alamzah",
           "Full Stack Web Developer !",
@@ -84,7 +86,10 @@ Project: Resume html
     },
 
     copy_right: function () {
-      document.getElementById("copyYear").innerHTML = new Date().getFullYear();
+      let copyYear = document.getElementById("copyYear");
+      if (copyYear) {
+        copyYear.innerHTML = new Date().getFullYear();
+      }
     },
 
     port_tab: function () {
