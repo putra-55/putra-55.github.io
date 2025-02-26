@@ -25,8 +25,8 @@
     <style>
       .cv_gallery_wrapper {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 3 kolom */
-        gap: 20px; /* Jarak antar item */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
       }
 
       .cv_gallery_item:nth-child(9n + 1) {
@@ -36,12 +36,11 @@
       .cv_gallery_img a,
       .cv_gallery_img img {
         height: 100%;
-        min-height: 200px;
-        /* aspect-ratio: 1/1; */
+        min-height: 150px;
       }
       @media (max-width: 991px) {
         .cv_gallery_wrapper {
-          grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+          grid-template-columns: repeat(3, 1fr);
         }
         .cv_gallery_item:nth-child(9n + 1) {
           grid-column: span 2;
@@ -49,12 +48,25 @@
       }
       @media (max-width: 769px) {
         .cv_gallery_wrapper {
-          grid-template-columns: repeat(2, 1fr); /* 3 kolom */
-          gap: 10px !important; /* Jarak antar item */
+          grid-template-columns: repeat(2, 1fr);
+          /* gap: 20px 0 !important; */
         }
         .cv_gallery_item:nth-child(3n + 1) {
           grid-column: span 2;
         }
+      }
+      @media (max-width: 569px) {
+        .cv_gallery_wrapper {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px 0 !important;
+        }
+        /* .cv_gallery_item:nth-child(3n + 1) {
+          grid-column: span 2;
+        } */
+      }
+
+      .cv_skill_icon img {
+        width: 100px !important;
       }
     </style>
     <!--=== custom css ===-->
@@ -181,8 +193,8 @@
             </p>
           </div>
           <div class="row justify-content-center">
-            <!-- <div class="col-12">
-              <ul class="cv_port_tab">
+            <div class="col-12">
+              <!-- <ul class="cv_port_tab">
                 <li>
                   <a class="active" data-rel="tab-1" href="javascript:void(0)"
                     >Projects</a
@@ -193,11 +205,11 @@
                     >Certificates</a
                   >
                 </li>
-              </ul>
-            </div> -->
-            <div class="col-lg-10 col-md-12">
+              </ul> -->
+            </div>
+            <div class="col-10">
               <div class="cv_tab_pane" id="tab-1" style="display: block">
-                <div class="cv_gallery_wrapper row g-0">
+                <div class="cv_gallery_wrapper">
                   <!-- Jaya Putra Teknik -->
                   <div class="cv_gallery_item">
                     <div class="cv_gallery_img">
@@ -208,7 +220,6 @@
                         <img
                           src="./assets/images/projects/jpt.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -232,7 +243,6 @@
                         <img
                           src="./assets/images/projects/bes.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -255,7 +265,6 @@
                         <img
                           src="./assets/images/projects/tirai-kencana.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -279,7 +288,6 @@
                         <img
                           src="./assets/images/projects/speakclass.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -305,7 +313,6 @@
                         <img
                           src="./assets/images/projects/supplier-exportir.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -328,7 +335,6 @@
                         <img
                           src="./assets/images/projects/eagan.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -351,7 +357,6 @@
                         <img
                           src="./assets/images/projects/miayani.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -374,7 +379,6 @@
                         <img
                           src="./assets/images/projects/mitra-cabang.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -397,7 +401,6 @@
                         <img
                           src="./assets/images/projects/centrica.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -419,7 +422,6 @@
                         <img
                           src="./assets/images/projects/ibs.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -442,7 +444,6 @@
                         <img
                           src="./assets/images/projects/desa-tikusan.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -465,7 +466,6 @@
                         <img
                           src="./assets/images/projects/rizki-alam-lestari.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -488,7 +488,6 @@
                         <img
                           src="./assets/images/projects/project-1.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -511,7 +510,6 @@
                         <img
                           src="./assets/images/projects/project-3.png"
                           class="img-fluid preview"
-                          loading="lazy"
                         />
                       </a>
                       <span class="cv_gallery_hover">
@@ -526,9 +524,7 @@
                   </div>
                 </div>
               </div>
-              <div class="cv_tab_pane" id="tab-2">
-                <h1>halo</h1>
-              </div>
+              <div class="cv_tab_pane" id="tab-2"></div>
             </div>
           </div>
         </div>
