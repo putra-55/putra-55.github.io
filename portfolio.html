@@ -23,54 +23,79 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
     <style>
-      .cv_gallery_wrapper {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+      #tab-2 .item:not(:first-child) {
+        margin-top: 10rem;
+      }
+      div[data-link],
+      div[data-link] a {
+        cursor: pointer !important;
+      }
+      .grid-container {
+        column-count: 5; /* Default untuk xxl */
+      }
+      #tab-1 .grid-container {
+        column-count: 4;
+      }
+      .coursera .grid-container {
+        column-count: 3;
+      }
+      #tab-2 .grid-container {
+        column-gap: 0.5rem;
       }
 
-      .cv_gallery_item:nth-child(9n + 1) {
-        grid-column: span 2;
-      }
-      .cv_gallery_img,
-      .cv_gallery_img a,
-      .cv_gallery_img img {
-        height: 100%;
-        min-height: 150px;
-      }
-      @media (max-width: 991px) {
-        .cv_gallery_wrapper {
-          grid-template-columns: repeat(3, 1fr);
+      @media (max-width: 1400px) {
+        #tab-1 .grid-container {
+          column-count: 3;
         }
-        .cv_gallery_item:nth-child(9n + 1) {
-          grid-column: span 2;
+        .coursera .grid-container {
+          column-count: 2;
         }
-      }
-      @media (max-width: 769px) {
-        .cv_gallery_wrapper {
-          grid-template-columns: repeat(2, 1fr);
-          /* gap: 20px 0 !important; */
+        .grid-container {
+          column-count: 4;
         }
-        .cv_gallery_item:nth-child(3n + 1) {
-          grid-column: span 2;
-        }
-      }
-      @media (max-width: 569px) {
-        .cv_gallery_wrapper {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 20px 0 !important;
-        }
-        /* .cv_gallery_item:nth-child(3n + 1) {
-          grid-column: span 2;
-        } */
       }
 
-      .cv_skill_icon img {
-        width: 100px !important;
+      @media (max-width: 992px) {
+        #tab-1 .grid-container {
+          column-count: 2;
+        }
+        .grid-container {
+          column-count: 3;
+        }
+        #tab-2 .item:not(:first-child) {
+          margin-top: 5rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        #tab-1 .grid-container {
+          column-count: 1;
+        }
+        .coursera .grid-container {
+          column-count: 1;
+        }
+        .grid-container {
+          column-count: 2;
+        }
+      }
+
+      .grid-item {
+        display: inline-block; /* Supaya tetap bisa memiliki margin */
+        width: 100%; /* Supaya tidak terpotong */
+        margin-bottom: 16px;
+        break-inside: avoid; /* Mencegah item terpotong */
+      }
+
+      #tab-1 img {
+        /* min-height: 1500px; */
+        aspect-ratio: 16/9;
+      }
+      #tab-2 .grid-item {
+        margin-bottom: 0.5rem;
       }
     </style>
     <!--=== custom css ===-->
-    <title>Portfolio Responsive HTML Template</title>
+    <title>My Work - Riski Putra Alamzah &mdash; Portfolio</title>
   </head>
   <body>
     <div class="cv_main_wrapper">
@@ -180,7 +205,7 @@
       </div>
       <!-- Navbar Start -->
       <!-- Portfolio Section Start -->
-      <div class="cv_portfolio_wrapper">
+      <div class="cv_portfolio_wrapper" style="overflow: unset">
         <div class="cv_container container-fluid">
           <div
             class="cv_do_heading d-flex flex-column align-items-center mb-4 text-center"
@@ -193,25 +218,47 @@
             </p>
           </div>
           <div class="row justify-content-center">
-            <div class="col-12">
-              <!-- <ul class="cv_port_tab">
+            <div
+              class="col-12"
+              style="
+                position: sticky;
+                top: 0px;
+
+                z-index: 2;
+              "
+            >
+              <ul
+                class="cv_port_tab"
+                style="
+                  max-width: 100%;
+                  border-radius: unset;
+                  border: unset;
+                  justify-content: center;
+                  gap: 3rem;
+                  background-image: linear-gradient(
+                    90deg,
+                    #101727 44.35%,
+                    #0f192f 100.68%
+                  );
+                "
+              >
                 <li>
-                  <a class="active" data-rel="tab-1" href="javascript:void(0)"
+                  <a class="" data-rel="tab-1" href="javascript:void(0)"
                     >Projects</a
                   >
                 </li>
                 <li>
-                  <a class="" data-rel="tab-2" href="javascript:void(0)"
+                  <a class="active" data-rel="tab-2" href="javascript:void(0)"
                     >Certificates</a
                   >
                 </li>
-              </ul> -->
+              </ul>
             </div>
-            <div class="col-10">
-              <div class="cv_tab_pane" id="tab-1" style="display: block">
-                <div class="cv_gallery_wrapper">
+            <div class="col-lg-10">
+              <div class="cv_tab_pane" id="tab-1">
+                <div class="grid-container">
                   <!-- Jaya Putra Teknik -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/jpt.png"
@@ -234,7 +281,7 @@
                     </div>
                   </div>
                   <!-- Baby Elephant Shoot -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/bes.png"
@@ -256,7 +303,7 @@
                     </div>
                   </div>
                   <!-- CV. Tirai Kencana -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/tirai-kencana.png"
@@ -279,7 +326,7 @@
                     </div>
                   </div>
                   <!-- SPEAKCLASS -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/speakclass.png"
@@ -304,7 +351,7 @@
                     </div>
                   </div>
                   <!-- Supplier Exportir -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/supplier-exportir.png"
@@ -326,7 +373,7 @@
                     </div>
                   </div>
                   <!-- PT. Eagan Warsana Energi -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/eagan.png"
@@ -348,7 +395,7 @@
                     </div>
                   </div>
                   <!-- Web Sekolah MI Ahmad Yani -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/miayani.png"
@@ -370,7 +417,7 @@
                     </div>
                   </div>
                   <!-- Mitra Cabang CV. Indekslink Indonesia -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/mitra-cabang.png"
@@ -392,7 +439,7 @@
                     </div>
                   </div>
                   <!-- PT. DVACAKRA CENTRICA INDONESIA (CENTRICA) -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/centrica.png"
@@ -413,7 +460,7 @@
                     </div>
                   </div>
                   <!-- PT. Indonesia Bersatu Sejahtera -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/ibs.png"
@@ -435,7 +482,7 @@
                     </div>
                   </div>
                   <!-- Desa Tikusan -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/desa-tikusan.png"
@@ -457,7 +504,7 @@
                     </div>
                   </div>
                   <!-- Rizki Alam Lestari -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/rizki-alam-lestari.png"
@@ -479,7 +526,7 @@
                     </div>
                   </div>
                   <!-- Sistem Inventaris -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/project-1.png"
@@ -501,7 +548,7 @@
                     </div>
                   </div>
                   <!-- Mandiri Foto Group -->
-                  <div class="cv_gallery_item">
+                  <div class="grid-item">
                     <div class="cv_gallery_img">
                       <a
                         href="./assets/images/projects/project-3.png"
@@ -524,7 +571,1223 @@
                   </div>
                 </div>
               </div>
-              <div class="cv_tab_pane" id="tab-2"></div>
+              <div
+                class="cv_tab_pane certificates"
+                id="tab-2"
+                style="display: block"
+              >
+                <div class="row item coursera">
+                  <div class="col-xl-4">
+                    <div
+                      class="cv_edu_heading d-flex justify-content-center align-items-center flex-column gap-3 lh-0"
+                      style="position: sticky; top: 50px"
+                    >
+                      <h2 style="font-size: 1.5rem">Bangkit Academy</h2>
+
+                      <p class="text-center mt-0">
+                        I am a proud alumnus of Bangkit Academy, a rigorous
+                        training program designed to develop future leaders in
+                        the tech industry. Below are some of the certificates I
+                        have earned during my time at Bangkit, showcasing my
+                        skills and dedication to continuous learning and
+                        professional growth.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-8">
+                    <div
+                      class="grid-container"
+                      style="row-gap: 0; column-count: 1"
+                    >
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://drive.google.com/file/d/188rQXo3H-bDL88fI2HEgKb0G8lslytf5/view?usp=drive_link"
+                        >
+                          <a
+                            href="./assets/images/certificates/bangkit.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/bangkit.png"
+                              class="img-fluid img-thumbnail preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row item coursera flex-row-reverse">
+                  <div class="col-xl-4">
+                    <div
+                      class="cv_edu_heading d-flex justify-content-center align-items-center flex-column gap-3 lh-0"
+                      style="position: sticky; top: 50px"
+                    >
+                      <h2 style="font-size: 1.5rem">MBKM Certificates</h2>
+
+                      <p class="text-center mt-0">
+                        I have participated in the MBKM Independent Study
+                        program at Kampus Merdeka with the partner Yayasan
+                        Dicoding for 6 months. This program has provided me with
+                        valuable knowledge and skills in various aspects of
+                        technology and software development. Below is the
+                        certificate I have earned during this program,
+                        showcasing my dedication and achievements.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-8">
+                    <div
+                      class="grid-container"
+                      style="row-gap: 0; column-count: 1"
+                    >
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://drive.google.com/file/d/13yyKzrpCc_PFT6ESpdenJbyj35Rkv48G/view?usp=drive_link"
+                        >
+                          <a
+                            href="./assets/images/certificates/mbkm.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/mbkm.png"
+                              class="img-fluid img-thumbnail preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row item">
+                  <div class="col-xl-4">
+                    <div
+                      class="cv_edu_heading d-flex justify-content-center align-items-center flex-column gap-3 lh-0"
+                      style="position: sticky; top: 50px"
+                    >
+                      <h2 style="font-size: 1.5rem">
+                        GCSB (Google Cloud Skills Boost)
+                      </h2>
+
+                      <p class="text-center mt-0">
+                        Here are some of the certificates I have earned on the
+                        Google Cloud Skills Boost platform. These certificates
+                        demonstrate my proficiency in various Google Cloud
+                        technologies and tools.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-8">
+                    <div class="grid-container" style="row-gap: 0">
+                      <!-- Jaya Putra Teknik -->
+
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12417125"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/dhhLphjCkhOWATnu9%2BfhKORcTVz0lCnTe1Ap2924Vn0%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/dhhLphjCkhOWATnu9%2BfhKORcTVz0lCnTe1Ap2924Vn0%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11684636"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/VvGZuErP4zQ5ktjYw0amu2Ul7h6iUqrnaORwCNwkuto%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/VvGZuErP4zQ5ktjYw0amu2Ul7h6iUqrnaORwCNwkuto%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11739381"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/jT7nToAO1myJ1T9cO5BdIKYJhZlAQQHuhbpdqt3ZDOI%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/jT7nToAO1myJ1T9cO5BdIKYJhZlAQQHuhbpdqt3ZDOI%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11740561"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/A4IKYEu%2FpkWClPI3S7XtUdUL3d6ZF6Ac1WDt3RZoscw%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/A4IKYEu%2FpkWClPI3S7XtUdUL3d6ZF6Ac1WDt3RZoscw%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11754158"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/PIMrT8aeyepNKz9d9vDK9qusuYR93M2NRJT%2F%2F6QZqcc%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/PIMrT8aeyepNKz9d9vDK9qusuYR93M2NRJT%2F%2F6QZqcc%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11759082"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/gwaziiY9l16dYBocReK5WM6Xe%2Ft3NoOo4026BzAdP%2FY%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/gwaziiY9l16dYBocReK5WM6Xe%2Ft3NoOo4026BzAdP%2FY%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11801071"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/t0b88bg6YHVVcyfjgBBGP%2BmVfr2k8zm1qrR9os9JBLc%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/t0b88bg6YHVVcyfjgBBGP%2BmVfr2k8zm1qrR9os9JBLc%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11810250"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/%2Fb6vXtWRtaGoDla7LMwPf7bX6UgDdY81abF2IU9Ouyc%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/%2Fb6vXtWRtaGoDla7LMwPf7bX6UgDdY81abF2IU9Ouyc%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11885560"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/lbQBxMmb2LKMw2LaSA%2FQ4LjS%2FqTw%2BuI%2B7SaoH8Vl%2Ft4%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/lbQBxMmb2LKMw2LaSA%2FQ4LjS%2FqTw%2BuI%2B7SaoH8Vl%2Ft4%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11897066"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/nKyV%2BRDiONLY%2F3HzvwN4yryQlIrvTgxmYgtzf0NzrAU%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/nKyV%2BRDiONLY%2F3HzvwN4yryQlIrvTgxmYgtzf0NzrAU%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11935855"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/shjT5LjJUHXQb68VfByccFNckibjgRDxDgh%2BuDRcIio%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/shjT5LjJUHXQb68VfByccFNckibjgRDxDgh%2BuDRcIio%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/11993098"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/PnBhgSK5s4ijylsEXG5htONBhVI%2BoX0uiT5khKk9Md8%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/PnBhgSK5s4ijylsEXG5htONBhVI%2BoX0uiT5khKk9Md8%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12000949"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/U1oe%2FbRZqwOi7Qu7LeOphCwJ5%2FJT8eMi8%2Fi3u7PvL1w%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/U1oe%2FbRZqwOi7Qu7LeOphCwJ5%2FJT8eMi8%2Fi3u7PvL1w%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12002120"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/5dLhvqW2q0GoDFG1b%2Beo%2F2B5bs7zVMr56ZKEYRF1mMc%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/5dLhvqW2q0GoDFG1b%2Beo%2F2B5bs7zVMr56ZKEYRF1mMc%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12011651"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/5D%2F9QfiaIW21joMjNrdNqYpLSaYUQFgslfVxdKi3ZcU%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/5D%2F9QfiaIW21joMjNrdNqYpLSaYUQFgslfVxdKi3ZcU%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12062150"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/NgxLXaw79LkaZdJS0BwhPZx1wcBJSzQ0jPPWKIbm35I%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/NgxLXaw79LkaZdJS0BwhPZx1wcBJSzQ0jPPWKIbm35I%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12088227"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/Au8XmoMOOARnWkKYyMj7OPxjJA4dSh3dpK1yAmey%2B3c%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/Au8XmoMOOARnWkKYyMj7OPxjJA4dSh3dpK1yAmey%2B3c%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12161016"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/Jjb%2FzMXij%2FXkl%2BzCd9SnV%2BVn7DGk2NJXHMGbVPhJhIo%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/Jjb%2FzMXij%2FXkl%2BzCd9SnV%2BVn7DGk2NJXHMGbVPhJhIo%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12255447"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/2ztYey8ufLpnrhx36E3Z87OpwRjB1OtAmL%2F13aH8X4E%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/2ztYey8ufLpnrhx36E3Z87OpwRjB1OtAmL%2F13aH8X4E%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12272704"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/EbKVqtpN%2FA6uMIZFRj1RBSkOO5uJ4ozY%2BKjIP%2BE%2B69M%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/EbKVqtpN%2FA6uMIZFRj1RBSkOO5uJ4ozY%2BKjIP%2BE%2B69M%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12294514"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/oR8B%2FuNyP%2F0gEL3Ionlf%2BvpsraICZzGUgcgacmC%2FMdg%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/oR8B%2FuNyP%2F0gEL3Ionlf%2BvpsraICZzGUgcgacmC%2FMdg%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12299195"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/jD65k7ICyyPiId1fxqfSzMtibDBPJaK5UFPZozvydoA%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/jD65k7ICyyPiId1fxqfSzMtibDBPJaK5UFPZozvydoA%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/12415923"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/G3FQHXnXtt1DjNfJrIB6pnliswtS9r4HI7tQ1QQrx9A%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/G3FQHXnXtt1DjNfJrIB6pnliswtS9r4HI7tQ1QQrx9A%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/857f0dcd-828a-4cfe-a3fd-84aa262c866d/badges/13182644"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/eqWmX686YYguvJJXCghylMhakSAz6cwGVA0AyLcY0YI%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/eqWmX686YYguvJJXCghylMhakSAz6cwGVA0AyLcY0YI%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/110f832e-f406-47bc-bd27-3c7da02175c3/badges/13904082"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/tKWyGIyUqwCz1buATdpHFThIJLZu84Q%2BcvuF1x5yz0I%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/tKWyGIyUqwCz1buATdpHFThIJLZu84Q%2BcvuF1x5yz0I%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14108993"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/M9Qb3E2jIyUIr1bd1XribBp0JJ3UaQa7yZv59GaX8aI%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/M9Qb3E2jIyUIr1bd1XribBp0JJ3UaQa7yZv59GaX8aI%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14107716"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/Ksc6WdU7X9wPk2p5GafJsVzIodwKfd9IJ2JXImuLXrs%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/Ksc6WdU7X9wPk2p5GafJsVzIodwKfd9IJ2JXImuLXrs%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14064017"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/Vs5lwoywGjpdqDAwpa0BZsp9Rdokv2NiozwkXyf3YlY%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/Vs5lwoywGjpdqDAwpa0BZsp9Rdokv2NiozwkXyf3YlY%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14061765"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/4rMa1zeVwwLX8OBIQTsV98MLR%2FOKDOxLif5mhqblyJs%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/4rMa1zeVwwLX8OBIQTsV98MLR%2FOKDOxLif5mhqblyJs%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Supplier Exportir -->
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14060599"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/uAZVhG%2BsSEXc0E3H9SlZ6tUQz%2BpvWM6FXZHoZwG5m84%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/uAZVhG%2BsSEXc0E3H9SlZ6tUQz%2BpvWM6FXZHoZwG5m84%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- PT. Eagan Warsana Energi -->
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14050256"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/N2O3xN1Oe8ia77xuOMUq6lozlWCXihUpqe%2Bb2KqHxm8%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/N2O3xN1Oe8ia77xuOMUq6lozlWCXihUpqe%2Bb2KqHxm8%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14049950"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/VRjYdOVTtkQh6sftId60ruWjlsjNrsyZlBpRQyJBmSE%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/VRjYdOVTtkQh6sftId60ruWjlsjNrsyZlBpRQyJBmSE%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14018209"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/KbqzjKcHkLlPN6MjA3QKHmK%2B7Hz3YwOekanSDJZiSWY%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/KbqzjKcHkLlPN6MjA3QKHmK%2B7Hz3YwOekanSDJZiSWY%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/14009739"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/r6WXBsEm%2B4pSMiqQaMvc9RRpAVoY4I172ic7O5I%2FiU0%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/r6WXBsEm%2B4pSMiqQaMvc9RRpAVoY4I172ic7O5I%2FiU0%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/13996331"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/a1g8TomyetnYU0HAG1Ms95WK1QbmrxiTuVfdqGr9JcM%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/a1g8TomyetnYU0HAG1Ms95WK1QbmrxiTuVfdqGr9JcM%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/13965811"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/P7fcBnIGDr7G8JlMY3HBiSKoRsVcJR%2Bt7oU0DLMFhps%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/P7fcBnIGDr7G8JlMY3HBiSKoRsVcJR%2Bt7oU0DLMFhps%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/110f832e-f406-47bc-bd27-3c7da02175c3/badges/13906661"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/4mGxc6r%2FZnDC9qfxtK8r15iOz26S7fiUf1coUck4Q8I%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/4mGxc6r%2FZnDC9qfxtK8r15iOz26S7fiUf1coUck4Q8I%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/13960666"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/G0hfHkzFRT6g4JFO5aXSxtEmvbfBNe4sMmT1abDwL6Q%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/G0hfHkzFRT6g4JFO5aXSxtEmvbfBNe4sMmT1abDwL6Q%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/13959524"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/P8gtKD1Uruqezk6G9XiuVAUW0tDqNDEj%2Bjy2Ftjqbjk%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/P8gtKD1Uruqezk6G9XiuVAUW0tDqNDEj%2Bjy2Ftjqbjk%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/110f832e-f406-47bc-bd27-3c7da02175c3/badges/13924780"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/cH0Z7%2Bbcnen2O50MwXu50s8KriOyhHbfSZv7VnlwOJw%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/cH0Z7%2Bbcnen2O50MwXu50s8KriOyhHbfSZv7VnlwOJw%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/13959377"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/RQhZyhu6J%2FB6MoY2p4wAb4HWxjAuBOsmG71ZtUW9hUQ%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/RQhZyhu6J%2FB6MoY2p4wAb4HWxjAuBOsmG71ZtUW9hUQ%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/110f832e-f406-47bc-bd27-3c7da02175c3/badges/13925520"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/gDrqAXssAsbXu0ifkDxQpofE9scvI4h8k3Y%2FOoF0Cc8%3D   "
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/gDrqAXssAsbXu0ifkDxQpofE9scvI4h8k3Y%2FOoF0Cc8%3D  "
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/13959147"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/q48Ha5zDHeG%2F5vYgH5OmkLgRYeLlHtbLgOawB7wJgo8%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/q48Ha5zDHeG%2F5vYgH5OmkLgRYeLlHtbLgOawB7wJgo8%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.cloudskillsboost.google/public_profiles/eb4d81b0-20df-4f59-b798-bf2bf00f2a26/badges/13984323"
+                        >
+                          <a
+                            href="https://cdn.qwiklabs.com/NbT5f%2B1TxunpsWX18%2Bew3PCKvuh27IgB98yeAENnS50%3D"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://cdn.qwiklabs.com/NbT5f%2B1TxunpsWX18%2Bew3PCKvuh27IgB98yeAENnS50%3D"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row item flex-row-reverse coursera">
+                  <div class="col-xl-4">
+                    <div
+                      class="cv_edu_heading d-flex justify-content-center align-items-center flex-column gap-3 lh-0"
+                      style="position: sticky; top: 50px"
+                    >
+                      <h2 style="font-size: 1.5rem">Coursera</h2>
+
+                      <p class="text-center mt-0">
+                        Here are some of the certificates I have earned on the
+                        Coursera platform. These certificates demonstrate my
+                        proficiency in various subjects and skills, showcasing
+                        my commitment to continuous learning and professional
+                        development.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-8">
+                    <div class="grid-container" style="row-gap: 0">
+                      <!-- Jaya Putra Teknik -->
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/specialization/UAMT53YUK1QN"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~UAMT53YUK1QN/CERTIFICATE_LANDING_PAGE~UAMT53YUK1QN.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~UAMT53YUK1QN/CERTIFICATE_LANDING_PAGE~UAMT53YUK1QN.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/R2EHPTSCJGWC"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~R2EHPTSCJGWC/CERTIFICATE_LANDING_PAGE~R2EHPTSCJGWC.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~R2EHPTSCJGWC/CERTIFICATE_LANDING_PAGE~R2EHPTSCJGWC.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/ZZE7A6XRXNH6"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~ZZE7A6XRXNH6/CERTIFICATE_LANDING_PAGE~ZZE7A6XRXNH6.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~ZZE7A6XRXNH6/CERTIFICATE_LANDING_PAGE~ZZE7A6XRXNH6.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/E1POYBGXU94P"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~E1POYBGXU94P/CERTIFICATE_LANDING_PAGE~E1POYBGXU94P.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~E1POYBGXU94P/CERTIFICATE_LANDING_PAGE~E1POYBGXU94P.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/FB0B9AUC82ND"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~FB0B9AUC82ND/CERTIFICATE_LANDING_PAGE~FB0B9AUC82ND.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~FB0B9AUC82ND/CERTIFICATE_LANDING_PAGE~FB0B9AUC82ND.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/XTISPL47C36M"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~XTISPL47C36M/CERTIFICATE_LANDING_PAGE~XTISPL47C36M.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~XTISPL47C36M/CERTIFICATE_LANDING_PAGE~XTISPL47C36M.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/RQA8Y2XAGF9G"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~RQA8Y2XAGF9G/CERTIFICATE_LANDING_PAGE~RQA8Y2XAGF9G.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~RQA8Y2XAGF9G/CERTIFICATE_LANDING_PAGE~RQA8Y2XAGF9G.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/PS4H0N5FD7X2"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~PS4H0N5FD7X2/CERTIFICATE_LANDING_PAGE~PS4H0N5FD7X2.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~PS4H0N5FD7X2/CERTIFICATE_LANDING_PAGE~PS4H0N5FD7X2.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.coursera.org/account/accomplishments/verify/OAR6WHXO7LWI"
+                        >
+                          <a
+                            href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~OAR6WHXO7LWI/CERTIFICATE_LANDING_PAGE~OAR6WHXO7LWI.jpeg"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~OAR6WHXO7LWI/CERTIFICATE_LANDING_PAGE~OAR6WHXO7LWI.jpeg"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row item coursera">
+                  <div class="col-xl-4">
+                    <div
+                      class="cv_edu_heading d-flex justify-content-center align-items-center flex-column gap-3 lh-0"
+                      style="position: sticky; top: 50px"
+                    >
+                      <h2 style="font-size: 1.5rem">Dicoding Academy</h2>
+
+                      <p class="text-center mt-0">
+                        Here are some of the certificates I have earned on the
+                        Dicoding Academy platform. These certificates
+                        demonstrate my proficiency in various subjects and
+                        skills, showcasing my commitment to continuous learning
+                        and professional development.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-8">
+                    <div class="grid-container" style="row-gap: 0">
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/53XEOVVQRZRN"
+                        >
+                          <a
+                            href="./assets/images/certificates/10.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/10.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/NVP775N64PR0"
+                        >
+                          <a
+                            href="./assets/images/certificates/9.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/9.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/2VX34477VZYQ"
+                        >
+                          <a
+                            href="./assets/images/certificates/8.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/8.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/L4PQ1D927XO1"
+                        >
+                          <a
+                            href="./assets/images/certificates/7.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/7.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/JLX17NDDGX72"
+                        >
+                          <a
+                            href="./assets/images/certificates/6.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/6.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/2VX340WGVZYQ"
+                        >
+                          <a
+                            href="./assets/images/certificates/5.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/5.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/98XW5Q184PM3"
+                        >
+                          <a
+                            href="./assets/images/certificates/4.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/4.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/GRX54MK3KP0M"
+                        >
+                          <a
+                            href="./assets/images/certificates/3.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/3.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/1RXY2V83QXVM"
+                        >
+                          <a
+                            href="./assets/images/certificates/2.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/2.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.dicoding.com/certificates/98XWLMO9WZM3"
+                        >
+                          <a
+                            href="./assets/images/certificates/dicoding-dasar-web.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/dicoding-dasar-web.png"
+                              class="img-fluid preview"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row item coursera flex-row-reverse">
+                  <div class="col-xl-4">
+                    <div
+                      class="cv_edu_heading d-flex justify-content-center align-items-center flex-column gap-3 lh-0"
+                      style="position: sticky; top: 50px"
+                    >
+                      <h2 style="font-size: 1.5rem">FreeCodeCamp</h2>
+
+                      <p class="text-center mt-0">
+                        Here are some of the certificates I have earned on the
+                        FreeCodeCamp platform. These certificates demonstrate my
+                        proficiency in various web development and programming
+                        skills, showcasing my dedication to continuous learning
+                        and professional growth.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xl-8">
+                    <div
+                      class="grid-container"
+                      style="row-gap: 0; column-count: 1"
+                    >
+                      <div class="grid-item">
+                        <div
+                          class="cv_gallery_img"
+                          data-link="https://www.freecodecamp.org/certification/fcc5d0968c7-b042-4b0f-aa80-e501f5928063/javascript-algorithms-and-data-structures"
+                        >
+                          <a
+                            href="./assets/images/certificates/freecodecamp.png"
+                            class="progressive replace"
+                          >
+                            <img
+                              src="./assets/images/certificates/freecodecamp.png"
+                              class="img-fluid preview img-thumbnail"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -557,6 +1820,16 @@
     <script src="assets/js/jquery.countTo.js"></script>
     <script src="assets/js/ityped.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
+    <script>
+      const dataLink = document.querySelectorAll("div[data-link]");
+      dataLink.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          const link = item.getAttribute("data-link");
+          window.open(link, "_blank");
+        });
+      });
+    </script>
     <!--=== Optional JavaScript ===-->
   </body>
 </html>
